@@ -11,13 +11,13 @@ Le système offre une interface en ligne de commande pour effectuer toutes les o
 Les fichiers utilisent l'encodage UTF-8 pour supporter les caractères accentués (français).
 
 ## Concepts Java Utilisés
-POO : Classes, Héritage, Polymorphisme, Abstraction
-Collections : ArrayList, List
-I/O : BufferedReader, BufferedWriter, FileReader, FileWriter
-Exception Handling : try-catch, IOException
-String Manipulation : split, parsing
-Date/Time API : LocalDate
-Scanner : Lecture des entrées utilisateur
+- POO : Classes, Héritage, Polymorphisme, Abstraction
+- Collections : ArrayList, List
+- I/O : BufferedReader, BufferedWriter, FileReader, FileWriter
+- Exception Handling : try-catch, IOException
+- String Manipulation : split, parsing
+- Date/Time API : LocalDate
+- Scanner : Lecture des entrées utilisateur
 
 ## Fonctionnalités Principales
 
@@ -74,9 +74,9 @@ Compte (abstract)
 -   ├── solde: double
 -   └── transactions: List<Transaction>
 -        ├── CompteCourant
--        │     └── decouvertAutorise: double
+-             └── decouvertAutorise:double
 -        └── CompteEpargne
--              └── tauxInteret: double
+-             └── tauxInteret: double
 
 Transaction
 -   ├── type: String
@@ -89,23 +89,23 @@ Le système utilise trois fichiers CSV pour la persistance des données :
 Format : numeroClient;nomClient
 2. comptes.csv
 Format : numeroCompte;type;numeroClient;solde;extra
-- Pour Épargne : extra = taux d'intérêt (ex: 0.05)
-- Pour Courant : extra = découvert autorisé (ex: 500.0)
+-         Pour Épargne : extra = taux d'intérêt (ex: 0.05)
+-         Pour Courant : extra = découvert autorisé (ex: 500.0)
 3. transactions.csv
 Format : numeroCompte;typeTransaction;montant;date
 
 ##  Installation et Exécution
 
 ### Prérequis
-Java JDK 11 ou supérieur
-Système d'exploitation : Windows
+- Java JDK 11 ou supérieur
+- Système d'exploitation : Windows
 
 #### Compilation
 javac *.java
 
 ### Exécution
 java Main
-Les fichiers CSV doivent être présents dans le même répertoire que les fichiers .class. S'ils n'existent pas, ils seront créés automatiquement à la fermeture du programme.
+- Les fichiers CSV doivent être présents dans le même répertoire que les fichiers .class. S'ils n'existent pas, ils seront créés automatiquement à la fermeture du programme.
 
 ## Guide d'Utilisation
 
@@ -113,17 +113,17 @@ Les fichiers CSV doivent être présents dans le même répertoire que les fichi
 Au lancement, le programme affiche le menu suivant :
 Bienvenue dans le système de gestion de MaBanque !
 Menu principal :
-1- Ajouter un client
-2- Lister les clients
-3- Ajouter un compte
-4- Lister les comptes des clients
-5- Déposer
-6- Retirer
-7- Virement
-8- Afficher balance
-9- Afficher transactions
-10- Appliquer intérêts
-0- Quitter
+- 1- Ajouter un client
+- 2- Lister les clients
+- 3- Ajouter un compte
+- 4- Lister les comptes des clients
+- 5- Déposer
+- 6- Retirer
+- 7- Virement
+- 8- Afficher balance
+- 9- Afficher transactions
+- 10- Appliquer intérêts
+- 0- Quitter
 
 ## Détails d'Implémentation
 
